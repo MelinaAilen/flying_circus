@@ -1,0 +1,12 @@
+def create_cast_list(filename):
+    cast_list = []
+    with open(filename) as f:
+        for line in f:
+            cast_list.append(line.split(',')[0])
+    return cast_list
+
+
+cast_list = create_cast_list('flying_circus_cast.txt')
+
+for name in cast_list:
+    print(name)
